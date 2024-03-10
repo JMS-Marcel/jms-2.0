@@ -1,0 +1,621 @@
+@font-face {
+    font-family: Poppins;
+    src: url(../Poppins/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: PoppinsBold;
+    src: url(../Poppins/Poppins-ExtraBold.ttf);
+}
+
+:root {
+    --blue: #006ff2;
+    --black: #444;
+    --light-color: #777;
+    --bg-color: #e6e6e6;
+    --border: .1rem solid rgba(0, 0, 0, .2);
+    --box-shadow: .4rem .4rem 1rem #ccc,
+        -.4rem -.4rem 1rem #fff;
+    --box-shadow-inset: .4rem .4rem 1rem #ccc inset,
+        -.4rem -.4rem 1rem #fff inset;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--bg-color);
+    font-family: Poppins;
+}
+body.active{
+    --black: #fff;
+    --light-color: #ddd;
+    --bg-color: #222;
+    --border: .1rem solid rgba(0, 0, 0, .4);
+    --box-shadow: .4rem .4rem 1rem #111,
+        -.4rem -.4rem 1rem #333;
+    --box-shadow-inset: .4rem .4rem 1rem #111 inset,
+        -.4rem -.4rem 1rem #333 inset;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    padding: 1.5rem;
+    background: var(--bg-color);
+    border-bottom: 1px solid hsl(0, 1%, 85%);
+}
+
+.logo {
+    margin-left: 60px;
+}
+
+#logo span {
+    color: var(--blue);
+}
+
+#logo {
+    font-family: PoppinsBold;
+    font-size: 1.2rem;
+    color: var(--black);
+    text-decoration: none;
+}
+
+#menu {
+    padding-right: 11rem;
+}
+
+#menu li {
+    display: inline-block;
+    margin-left: 3.75rem;
+}
+
+#menu li a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+#menu li .active {
+    color: var(--blue);
+}
+
+#menu li a:active {
+    color: var(--blue);
+}
+
+#menu li a:hover {
+    color: var(--blue);
+}
+
+
+#menu-btn{
+    position: fixed;
+    top:0.5rem; left: 2rem;
+    z-index: 1000;
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    color:var(--black);
+    background: var(--bg-color);
+    display: none;
+}
+
+#menu-btn:hover{
+    color:var(--blue);
+    box-shadow: var(--box-shadow-inset);
+}
+/* ACTIVE MODE DARCK */
+#theme-toggler {
+    position: fixed;
+    top: 0.5rem;right: 0.5rem;
+    z-index: 1000;
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    color: var(--blue);
+    background: var(--bg-color);
+}
+
+#theme-toggler:hover {
+    color: var(--blue);
+    box-shadow: var(--box-shadow-inset);
+    text-shadow: 1px 1px 4px #006ff2;
+
+}
+
+/* MAIN */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -20px;
+}
+
+section {
+    min-height: 100vh;
+    width: 92%;
+    padding: 5.62rem .6rem;
+}
+
+.heading {
+    font-size: 3rem;
+    text-align: center;
+    margin: 0;
+    margin-top: -8px;
+}
+
+.heading span {
+    color: #006ff2;
+}
+
+.btn {
+    text-decoration: none;
+    padding: .75rem 2rem;
+    border: none;
+    border-radius: .5rem;
+    font-size: 1.2rem;
+    color: var(--bg-color);
+    cursor: pointer;
+    background: var(--blue);
+    box-shadow: .2rem .2rem 6px #006ff2;
+}
+
+.btn:hover {
+    box-shadow: .2rem .2rem 12px #006ff2;
+    background: #107ffd;
+    color: var(--bg-color);
+}
+
+/* ACCUeIL */
+#Accueil {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+
+.left {
+    width: 60%;
+}
+
+svg {
+    width: 100%;
+}
+
+.svg {
+    margin-right: 60px;
+    width: 70%;
+    height: auto;
+}
+
+
+h1:nth-child(2) {
+    color: #006ff2;
+    font-size: 1.5rem;
+    margin-bottom: -5px;
+}
+
+h1:nth-child(2) span {
+    position: relative;
+}
+
+h1:nth-child(2) span::before {
+    content: "suis un Developpeur";
+    animation: words 20s infinite;
+}
+
+h1:nth-child(2) span::after {
+    content: '';
+    background: var(--bg-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 2px solid #006ff2;
+    right: -8px;
+    animation: cursor .6s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 2px solid #e6e6e6;
+    }
+}
+
+@keyframes words {
+
+    0%,
+    20% {
+        content: "m'appelle Jemsh Marcel";
+    }
+
+    21%,
+    40% {
+        content: 'suis un Developpeur';
+    }
+
+    41%,
+    60% {
+        content: "m'appelle Jemsh Marcel";
+    }
+
+    61%,
+    80% {
+        content: 'suis un Developpeur';
+    }
+
+    81%,
+    100% {
+        content: "m'appelle Jemsh Marcel";
+    }
+}
+
+@keyframes typing {
+
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+        width: 0;
+    }
+
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+        width: calc(100% + .5rem);
+    }
+}
+
+
+
+h1:nth-child(3) {
+    font-size: 1.25rem;
+    margin-bottom: -5px;
+}
+
+.text {
+    padding: 1.5rem 0px;
+}
+
+.reseux {
+    margin-top: 5rem;
+}
+
+.left .reseux span {
+    font-weight: 600;
+    color: blue;
+    margin-right: 2.1rem;
+}
+
+.left .reseux a {
+    text-decoration: none;
+    box-shadow: var(--box-shadow);
+    border-radius: 8px;
+    padding: .8rem;
+    margin: .9rem;
+    font-size: 1rem;
+}
+
+.left .reseux a:hover {
+    box-shadow: var(--box-shadow-inset);
+}
+
+#facebook {
+    padding: .9rem;
+    color: var(--blue);
+}
+
+#linkedin {
+    color: var(--blue);
+}
+
+#github {
+    color: #000;
+}
+
+/* SVG */
+.st2 {
+    animation: slide 5s ease-in-out infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-8px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+#slideToggle {
+    border: 1px solid #000;
+    animation: slideToggle 4s ease-in-out infinite;
+}
+
+@keyframes slideToggle {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+
+}
+
+/* A PROPOS */
+
+.Apropos {
+    display: flex;
+}
+
+article {
+    margin-right: 4.06rem;
+    text-align: justify;
+}
+
+aside {
+    display: flex;
+    justify-content: center;
+}
+
+.portrait img {
+    border: 1rem solid transparent;
+    border-radius: 50%;
+    height: 18rem;
+    width: 18rem;
+    box-shadow: var(--box-shadow);
+
+}
+
+.portrait h2 {
+    color: var(--black);
+    margin-top: -.2em;
+    margin-left: 62px;
+}
+.portrait .btn {
+    margin-left: 72px;
+}
+
+dl {
+    display: flex;
+    font-size: 1.2rem;
+}
+
+dt {
+    color: var(--blue);
+    text-decoration: underline;
+}
+
+dd:hover {
+    color: var(--blue);
+}
+
+#nom {
+    margin-left: 50px;
+}
+
+#email:hover {
+    text-decoration: underline;
+}
+
+#tel {
+    margin-left: 60px;
+}
+
+/* EDUCATION */
+
+#Education > h2{
+    color: var(--black);
+}
+.education {
+    display: flex;
+    flex-direction: row;
+    gap: 6.25rem;
+    flex-flow: wrap;
+    align-items: center;
+    margin-top: -1rem;
+}
+.education:nth-child(3) {
+    padding-top: 2rem;
+}
+
+.education .progress {
+    flex: 1 1 20rem;
+}
+
+.education .progress h3 {
+    color: var(--black);
+    font-weight: normal;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.education .progress .bar {
+    box-shadow: var(--box-shadow);
+    border-radius: 5rem;
+    height: .8rem;
+    padding: .2rem;
+    margin: 1rem 0;
+}
+
+.education .progress .bar span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, #fff, #006ff2);
+    border-radius: 5rem;
+}
+
+
+.education .progress .bar-1-1 span {
+    width: 85%;
+}
+
+.education .progress .bar-1-2 span {
+    width: 75%;
+}
+
+.education .progress .bar-1-3 span {
+    width: 65%;
+}
+
+.education .progress .bar-2-1 span {
+    width: 95%;
+}
+
+.education .progress .bar-2-2 span {
+    width: 89%;
+}
+
+.education .progress .bar-2-3 span {
+    width: 65%;
+}
+
+/* PORTFOLIO */
+
+.portfolio .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.portfolio .box-container .box {
+    width: 18.75rem;
+    height: 19.37rem;
+    background: var(--bg-color);
+    border: 1rem solid transparent;
+    border-radius: 0.9rem;
+    box-shadow: var(--box-shadow);
+    margin: 2.8rem 0px;
+
+}
+
+.portfolio .box-container .box .mini-box {
+    border: 1rem solid transparent;
+    border-radius: 0.9rem;
+    height: 80%;
+    width: 90%;
+    box-shadow: var(--box-shadow);
+}
+
+.portfolio .box-container .box img {
+    border-radius: .5rem;
+    height: 95%;
+    width: 98%;
+}
+
+.portfolio .box-container .box img:hover {
+    height: calc(95%+ 2px);
+    width: calc(98% + 2px);
+}
+
+.portfolio .content h4 a {
+    text-decoration: none;
+    font-weight: 400;
+    color: var(--blue);
+}
+
+/* CONATCTE */
+.contact form {
+    margin: auto;
+    max-width: 35rem;
+    max-height: 24rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    padding: 1.25rem 2.5rem;
+}
+
+.contact form .box {
+    padding: .6rem;
+    width: 100%;
+    background: none;
+    color: var(--black);
+    font-size: 1.2rem;
+    text-transform: none;
+    margin: .7rem 0;
+    border: none;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+}
+
+.contact form textarea {
+    height: 6.5rem;
+    resize: none;
+
+}
+
+.contact form .box:focus {
+    outline: none;
+    box-shadow: var(--box-shadow-inset);
+}
+.footer{
+    border-top: var(--border);
+    text-align: center;
+}
+
+.footer p{
+    color: var(--blue);
+}
+
+.scrollUp{
+  position: fixed;
+  right: .5rem;bottom: 4rem;
+  height: 3rem;
+  width: 3rem;
+  line-height: 3rem;
+  border-radius: 50%;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--blue);
+}
+.scrollUp:hover{
+    box-shadow: var(--box-shadow-inset);
+}
+

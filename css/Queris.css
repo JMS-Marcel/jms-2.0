@@ -1,0 +1,86 @@
+@media (max-width:991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    body {
+        padding-left: 0;
+        overflow-x: hidden;
+    }
+    section{
+        min-height: 94vh;
+        padding: 8.62rem .6rem;
+    }
+    .navbar {
+        top: -90%;
+
+    }
+
+    .navbar.active {
+        top: 0%;
+        transition: .4s linear;
+    }
+
+    #menu-btn {
+        display: initial;
+    }
+
+    .reseux {
+        margin-top: 1rem;
+    }
+    .svg {
+        width: 70%;
+        margin-bottom: -200px;
+    }
+    .Apropos{
+        flex-wrap: wrap;
+    }
+    aside{
+        align-items: center;
+    }
+    .portrait img{
+    height: 18rem;
+    width: 18rem;
+    margin-left: 50px;
+    border-radius: 2rem;
+    }
+
+}
+
+
+@media (max-width:768px){
+    body {
+        overflow: hidden;
+    }
+    #Accueil {
+        flex-wrap: wrap-reverse;
+    }
+    #menu li{
+        display: block;
+        margin-right: 9rem;
+    }
+ 
+}
+@media (max-width:450px) {
+
+    html {
+        font-size: 50%;
+    }
+    section{
+        min-height: 80vh;
+        padding: 8.62rem .6rem;
+    }
+    .header {
+        width: 100%;
+        border-right: 0;
+    }
+
+    #Accueil {
+        flex-wrap: wrap-reverse;
+    }
+    .svg {
+        width: 100%;
+    }
+
+}
