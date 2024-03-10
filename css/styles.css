@@ -31,7 +31,7 @@ body {
     font-family: Poppins;
 }
 body.active{
-    --black: #fff;
+    --black:rgba(255, 255, 255, 0.938);
     --light-color: #ddd;
     --bg-color: #222;
     --border: .1rem solid rgba(0, 0, 0, .4);
@@ -192,7 +192,6 @@ section {
 /* ACCUeIL */
 #Accueil {
     display: flex;
-    /* align-items: center; */
     justify-content: space-between;
 }
 
@@ -210,7 +209,9 @@ svg {
     height: auto;
 }
 
-
+h1:nth-child(1),h1:nth-child(3){
+    color:var(--black);
+}
 h1:nth-child(2) {
     color: #006ff2;
     font-size: 1.5rem;
@@ -308,6 +309,7 @@ h1:nth-child(3) {
 
 .text {
     padding: 1.5rem 0px;
+    color: var(--black);
 }
 
 .reseux {
@@ -390,6 +392,9 @@ h1:nth-child(3) {
 .Apropos {
     display: flex;
 }
+#Apropos article p{
+    color: var(--black);
+}
 
 article {
     margin-right: 4.06rem;
@@ -435,6 +440,7 @@ dd:hover {
 
 #nom {
     margin-left: 50px;
+    color: var(--black);
 }
 
 #email:hover {
@@ -443,13 +449,15 @@ dd:hover {
 
 #tel {
     margin-left: 60px;
+    color: var(--black);
 }
 
 /* EDUCATION */
 
-#Education > h2{
+#Education > h2, #Education p{
     color: var(--black);
 }
+
 .education {
     display: flex;
     flex-direction: row;
@@ -549,8 +557,8 @@ dd:hover {
 }
 
 .portfolio .box-container .box img:hover {
-    height: calc(95%+ 2px);
-    width: calc(98% + 2px);
+    height: calc(95% + 3px);
+    width: calc(98% + 3px);
 }
 
 .portfolio .content h4 a {
@@ -591,6 +599,9 @@ dd:hover {
 .contact form .box:focus {
     outline: none;
     box-shadow: var(--box-shadow-inset);
+}
+#Apropos .lienContact{
+    color: var(--black);
 }
 .footer{
     border-top: var(--border);
