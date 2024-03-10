@@ -220,6 +220,7 @@ h1:nth-child(2) {
 
 h1:nth-child(2) span {
     position: relative;
+    z-index:-999;
 }
 
 h1:nth-child(2) span::before {
